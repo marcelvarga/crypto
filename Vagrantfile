@@ -4,4 +4,3 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell",
     inline: "sudo pacman -Syu --noconfirm; sudo pacman -S --noconfirm sagemath"
 end
-
