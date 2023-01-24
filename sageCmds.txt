@@ -1,0 +1,34 @@
+sage: p = 2593
+sage: (p-1).factor()
+2^5 * 3^4
+sage: Fp = GF(p)
+sage: p = 31
+sage: Fp = GF(p)
+sage: G = Fp.unit_group()
+sage: G.order()
+30
+sage: G.gens_values()
+(3,)
+
+sage: g = 3
+sage: g ^ (p-1)
+205891132094649
+
+sage: g = G.gens_values()[0]
+sage: g ^ (p-1)
+1
+sage: g ^ ((p-1)/2)
+30
+sage: elt = g ^ ((p-1)/2)
+sage: elt^2
+1
+sage: elt = g ^ ((p-1)/5)
+sage: elt^2
+8
+sage: elt^5
+1
+
+sage: 625^(4*0) == 1 % p
+True
+sage: 625^(4*1) == 1 % p
+False
